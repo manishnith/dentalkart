@@ -1,0 +1,51 @@
+
+
+
+
+// http://www.dentalkart.com/index.php/webservice/customer/getProductDetails/product_id/2593
+
+var config = {
+    url : "http://www.dentalkart.com",
+
+}
+
+fetch(url).then(function(response) {
+  return response.json();
+}).then(function(data) {
+  console.log(data);
+}).catch(function() {
+  console.log("Booo");
+});
+
+
+
+var request = new Request('/users.json', {
+    method: 'POST', 
+    mode: 'cors', 
+    redirect: 'follow',
+    headers: new Headers({
+        'Content-Type': 'text/plain'
+    })
+});
+
+// Now use it!
+fetch(request).then(function() { /* handle response */ });
+
+And if you want to POST JSON to the server:
+
+fetch('/submit-json', {
+    method: 'post',
+    body: JSON.stringify({
+        email: document.getElementById('email').value
+        answer: document.getElementById('answer').value
+    })
+});
+fetch to post form data:
+
+fetch('/submit', {
+    method: 'post',
+    body: new FormData(document.getElementById('comment-form'))
+});
+
+
+

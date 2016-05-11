@@ -1,0 +1,16 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Lists</ion-title>
+</ion-navbar>
+
+<ion-content>
+ <ion-list>
+
+    <ion-item *ngFor="#link of links">
+      <ion-icon name="medical" item-left></ion-icon>
+     
+    </ion-item>
+  </ion-list>
+</ion-content>
