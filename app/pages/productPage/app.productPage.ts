@@ -6,6 +6,8 @@ import {AppService} from '../../services/app.service';
   templateUrl: 'build/pages/productPage/app.productPage.html',
    providers: [AppService]
 })
+
+
 export class ProductPage {
 	appservice: AppService; 
 	product: Object; 
@@ -18,6 +20,9 @@ export class ProductPage {
     ngOnInit() {
 		this.product = this.appservice.getProductDetails();
 		console.log(this.product);
+	//	this.appservice.getCartItems();
     }
   
 }
+
+

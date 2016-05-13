@@ -1,9 +1,10 @@
 import {App, IonicApp, Platform} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
-import {GettingStartedPage} from './pages/home/app.home';
+import {Home} from './pages/home/app.home';
 import {ListPage} from './pages/menu/app.menu';
 import {ProductList} from './pages/productList/app.productList';
 import {ProductPage} from './pages/productPage/app.productPage';
+import {CartPage} from './pages/shoppingCartPage/app.cart';
 import {AppService} from './services/app.service';
 
 @App({
@@ -11,7 +12,7 @@ import {AppService} from './services/app.service';
   config: {} 
 })
 class MyApp {
-  rootPage: any = GettingStartedPage;
+  rootPage: any = Home;
   pages: Array<{title: string, component: any}>
 
   constructor(private app: IonicApp, private platform: Platform) {
@@ -19,7 +20,7 @@ class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: GettingStartedPage },
+      { title: 'Home', component: Home },
       { title: 'Menu', component: ListPage },
       { title: 'ProductList', component: ProductList },
       {title: 'ProductPage' , component: ProductPage }

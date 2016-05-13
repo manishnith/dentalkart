@@ -1,5 +1,8 @@
-import {Page, NavController, NavParams, Platform,} from 'ionic-angular';
+import {Page, NavController, NavParams, Platform} from 'ionic-angular';
 import {AppService} from '../../services/app.service';
+import {Home} from '../home/app.home';
+
+
 
 @Page({
   templateUrl: 'build/pages/productList/app.productList.html',
@@ -7,11 +10,22 @@ import {AppService} from '../../services/app.service';
 })
 export class ProductList {
 	appservice: AppService; 
-	productList: any[]; 
+	private nav: NavController;
 
-	constructor(appservice: AppService){
+
+	constructor(appservice: AppService, nav: NavController){
  	  	this.appservice = appservice;
+ 	  	this.nav = nav;
+ 	  	this.productList = [];
+
     }
+    addToCart(product){
+      this.appservice.addToCart(product);
+    }
+
+  	goToProduct(){
+	   this.nav.push(Home);
+	}
 
     ngOnInit() {
 		this.productList = this.appservice.getProductByCategory();
@@ -20,5 +34,5 @@ export class ProductList {
 		}
 		//console.log(typeof this.getProductImages());
     }
-
+  
 }

@@ -1,10 +1,11 @@
-import {Modal, Slides, NavController, Page, ViewController} from 'ionic-angular';
+import {Modal, Slides, NavController, Page} from 'ionic-angular';
+import {CartPage} from '../shoppingCartPage/app.cart';
 
 
 @Page({
   templateUrl: 'build/pages/home/app.home.html'
 })
-export class GettingStartedPage {
+export class Home {
 
    mySlideOptions = {
     initialSlide: 1,
@@ -16,13 +17,13 @@ nav: NavController;
   }
 	
   showModal() {
-    let modal = Modal.create(MyModal);
+    let modal = Modal.create(CartPage);
     this.nav.present(modal)
   }
 }
 
 
-@Page({
+/*@Page({
   templateUrl: 'build/pages/common/cart-header/app.header.cart.html'
 })
 
@@ -35,4 +36,4 @@ class MyModal {
   close() {
     this.viewCtrl.dismiss();
   }
-}
+}*/

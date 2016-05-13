@@ -7,18 +7,20 @@ import 'rxjs/Rx';
 let favorites = [],
     URL = "http://localhost:3000";
 
- 
+ let productsInCart = [];
+
+
 @Injectable()
 export class AppService {
  
-    http: Http;
+
+    constructor() {
+
+    }
     
 
-    constructor(http: Http) {
-        this.http = http;
-    }
- 
- 
+  
+    
 
     getProductDetails(){
         let result =  {"data":{"id":"2593","sku":"DENTSPLY4021","name":"MAILLEFER K FILE SIZE 40 21mm","short_description":"MAILLEFER K FILE SIZE 40 21mm","description":"","price":"285.0000","special_price":"","product_url":"http:\/\/www.dentalkart.com\/index.php\/maillefer-k-file-size-40-21mm.html"}};
@@ -39,6 +41,23 @@ export class AppService {
     
     checkService(pageName){
         console.log(pageName);
+    }
+    
+
+
+    addToCart(product){
+        if(productsInCart.indexOf(product) == -1) {
+            product.quantity = 1;
+            productsInCart.push(product);
+        }else{
+            product.quantity++;
+        }
+
+        console.log(productsInCart);
+    }
+    getCartItems(){
+        console.log(productsInCart);
+       return productsInCart;
     }
  
 }
