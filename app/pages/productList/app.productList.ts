@@ -15,7 +15,10 @@ export class ProductList {
 
     ngOnInit() {
 		this.productList = this.appservice.getProductByCategory();
-		console.log(this.productList);
+		this.getProductImages = function(product){
+			return product.images;
+		}
+		//console.log(typeof this.getProductImages());
     }
 
 }

@@ -1,3 +1,19 @@
+
+<ion-list>
+   <ion-item *ngFor="#product of productList">
+    <ion-thumbnail item-left >
+      <img src="http://www.dentalkart.com/media/catalog/product/5/-/5-packs-dental-orthodontic-material-elastic_2.jpg"/>
+    </ion-thumbnail>
+    <h2>{{product.name}}</h2>
+    <p>{{product.short_description}}</p>
+    <p>{{product.price}}</p>
+    <p>{{product.special_price}}</p>
+    <button clear item-right>Add</button>
+  </ion-item>
+</ion-list>
+
+
+<!-- 
 <ion-list>
   <ion-item *ngFor="#product of productList">
     <p>{{product.id}}</p>
@@ -8,8 +24,11 @@
 	<p>{{product.short_description}}</p>
 	<p>{{product.sku}}</p>
 	<p>{{product.special_price}}</p>
+	<p *ngFor="#image of getProductImages(product)">
+		<img src="{{image.url}}"/>
+	</p>
   </ion-item>
 </ion-list>
 
 
-
+ -->
