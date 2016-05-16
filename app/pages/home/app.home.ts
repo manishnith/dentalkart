@@ -1,5 +1,6 @@
 import {Modal, Slides, NavController, Page} from 'ionic-angular';
 import {CartPage} from '../shoppingCartPage/app.cart';
+import {SearchPage} from '../search/app.search';
 
 
 @Page({
@@ -19,6 +20,10 @@ nav: NavController;
   showModal() {
     let modal = Modal.create(CartPage);
     this.nav.present(modal)
+  }
+  showSearchModal(){
+      let modal = Modal.create(SearchPage);
+      this.nav.present(modal)
   }
 }
 

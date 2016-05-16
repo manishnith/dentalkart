@@ -1,6 +1,6 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
 import {AppService} from '../../services/app.service';
- 
+import {ProductList} from '../productList/app.productList'
 
 
 
@@ -14,16 +14,18 @@ export class CategoryList {
     appservice: AppService; 
 
 
-    constructor(appservice: AppService){
+    constructor(appservice: AppService, nav: NavController){
         this.appservice = appservice;
         this.categoryList = [];
+        this.nav = nav;
     }
 
 
-    getSubCategory(category){
-        if(category.children.length > 0){
-            this.categoryList = category.children;
-        }
+    getProducts(category){
+        console.log(category.category_id);
+        this.nav.push(ProductList, {
+          category: category.category_id
+        });
         
     }
   

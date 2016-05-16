@@ -13,12 +13,14 @@ export class ProductPage {
 	product: Object; 
 	//declare the property explicitly (the access defaults to public)
 	  
-	constructor(appservice: AppService){
+	constructor(appservice: AppService, nav: NavController , navParams: NavParams){
  	  	this.appservice = appservice;
+ 	  	this.navParams = navParams;
     }
 
     ngOnInit() {
-		this.product = this.appservice.getProductDetails();
+    	this.product = this.navParams.data.product;
+	//	this.product = this.appservice.getProductDetails();
 	//	console.log(this.product);
 	//	this.appservice.getCartItems();
 	/*	this.appservice.testingAPI().subscribe(

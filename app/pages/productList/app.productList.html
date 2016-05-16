@@ -9,7 +9,7 @@
   <button royal (click)="showModal()">
      <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
   </button>
-    <button royal>
+    <button royal >
       <ion-icon name="search"></ion-icon>
     </button>
   </ion-buttons>
@@ -28,7 +28,7 @@
     <ion-thumbnail item-left >
       <img src="http://www.dentalkart.com/media/catalog/product/5/-/5-packs-dental-orthodontic-material-elastic_2.jpg"/>
     </ion-thumbnail>
-    <h2>{{product.name}}</h2>
+    <a (click)="getProductDetail(product)">{{product.name}}</a>
     <p>{{product.short_description}}</p>
     <p>{{product.price}}</p>
     <p>{{product.special_price}}</p>
