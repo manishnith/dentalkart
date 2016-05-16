@@ -19,8 +19,11 @@ export class ProductPage {
 
     ngOnInit() {
 		this.product = this.appservice.getProductDetails();
-		console.log(this.product);
+	//	console.log(this.product);
 	//	this.appservice.getCartItems();
+	/*	this.appservice.testingAPI().subscribe(
+            data => this.product = data
+        );*/
     }
   
 }

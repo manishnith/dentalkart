@@ -3,3 +3,4 @@
 	"getProductById" : "/webservice/customer/getProductDetails/product_id/2593",
 	"getProductByCategoryId" : "/webservice/customer/getProductByCategory/cat_id/8"
 }
+
