@@ -1,3 +1,27 @@
+<ion-toolbar>
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Home</ion-title>
+</ion-navbar>
+  <ion-buttons start>
+  <button royal (click)="showModal()">
+     <ion-icon ios="ios-cart" md="md-cart"></ion-icon>
+  </button>
+    <button royal>
+      <ion-icon name="search"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-buttons end>
+    <button royal>
+       <ion-icon ios="ios-person" md="md-person"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding>
 <ion-list>
   <ion-item>
     <p>{{product.id}}</p>
@@ -11,7 +35,7 @@
   </ion-item>
 </ion-list>
 
-
+</ion-content>
 
 
 

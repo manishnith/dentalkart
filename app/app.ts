@@ -5,6 +5,7 @@ import {ListPage} from './pages/menu/app.menu';
 import {CategoryList} from './pages/categoryListPage/app.categories';
 import {ProductList} from './pages/productList/app.productList';
 import {ProductPage} from './pages/productPage/app.productPage';
+import {SearchPage} from './pages/search/app.search';
 import {CartPage} from './pages/shoppingCartPage/app.cart';
 import {AppService} from './services/app.service';
 
@@ -25,7 +26,8 @@ class MyApp {
       { title: 'Menu', component: ListPage },
       { title: 'Category', component: CategoryList },
       { title: 'ProductList', component: ProductList },
-      {title: 'ProductPage' , component: ProductPage }
+      {title: 'ProductPage' , component: ProductPage },
+      {title: 'Search' , component: SearchPage }
     ];
 
   }
